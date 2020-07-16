@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: jfbetapipeorg/Org_test_Automation           
+      path: vijayreddy1991/utilityfunction           
       
 pipelines:
   - name: utilityfuctiontest1
