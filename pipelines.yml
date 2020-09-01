@@ -1,20 +1,20 @@
 resources:
-  - name: repo_pipe
+  - name: vijay_pipe
     type: GitRepo
     configuration:
-      gitProvider: s_gitHub
+      gitProvider: vijay
       path: vijayreddy1991/utilityfunction           
       
 pipelines:
-  - name: utilityfuctiontest1
+  - name: vijay_utilityfuction
     steps:
-      - name: utilityFunction
+      - name: utilityFunctionadding
         type: Bash
         configuration:
           integrations:
-            - name: s_gitHub
+            - name: vijay
           inputResources:
-            - name: repo_pipe
+            - name: vijay_pipe
             
         execution:
           onExecute: 
@@ -23,28 +23,28 @@ pipelines:
             - bump_semver v3.0.0 minor
             - bump_semver v3.0.0 patch
             - bump_semver v3.0.0 beta
-            - pushd $res_repo_pipe_resourcePath    
+            - pushd $res_vijay_pipe_resourcePath    
             - touch keys
-            - echo "name =$res_repo_pipe_gitProvider_name" >> keys
+            - echo "name =$res_vijay_pipe_gitProvider_name" >> keys
             - replace_envs $PWD/keys 
             - cat keys
             - touch file.txt
             - echo "Hello frog" >> file.txt
             - touch test.txt
             - echo "Hello pipelines team" >> test.txt
-#             - compare_git --resource repo_pipe --commit-range HEAD~3..HEAD UtilityFunction.yml
-#             - update_commit_status repo_pipe --status failure --message "My description 123" --context "stepB"            
-#             - read_json $res_repo_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
+#             - compare_git --resource vijay_pipe --commit-range HEAD~3..HEAD UtilityFunction.yml
+#             - update_commit_status vijay_pipe --status failure --message "My description 123" --context "stepB"            
+#             - read_json $res_vijay_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
             - add_cache_files $PWD/file.txt jfrog_pipe 
             - add_run_variables imageTag="master"
             #- add_run_variables runVaribale="foo   123"
             - add_run_files $PWD/test.txt jfrog
-            - add_pipeline_variables scm=$int_s_gitHub_masterName
+            - add_pipeline_variables scm=$int_vijay_masterName
             # - add_pipeline_variables pipelineVaribale="foo  bar"
             - export_run_variables 
             - export_pipeline_variables          
             - add_pipeline_files $PWD/file.txt jfrog_pipeline
-            - find_resource_variable repo_pipe resourcePath
+            - find_resource_variable vijay_pipe resourcePath
             - restore_cache_files jfrog_pipe $PWD/file.txt
             - cat file.txt
 #             - openssl genrsa -out key.pem 1024 
@@ -67,22 +67,22 @@ pipelines:
 #             - hash -d pip
 #             - pip install pytest           
 #             - py.test --verbose --junit-xml test-reports/results.xml tests/core/sampleExecutionFile/test_calc.py
-#             - save_tests $res_repo_pipe_resourcePath/test-reports/results.xml             
+#             - save_tests $res_vijay_pipe_resourcePath/test-reports/results.xml             
             - popd
 
-      - name: utilityFunction2
+      - name: utilityFunctionverify
         type: Bash
         configuration:
           integrations:
-            - name: s_gitHub
+            - name: vijay
           inputSteps:
             - name: utilityFunction
           inputResources:
-            - name: repo_pipe                
+            - name: vijay_pipe                
         execution:
           onExecute:
             - printenv
-            - pushd $res_repo_pipe_resourcePath
+            - pushd $res_vijay_pipe_resourcePath
             - restore_run_files jfrog $PWD/test.txt
             - cat $PWD/test.txt
             - restore_cache_files jfrog_pipe $PWD/file.txt
@@ -91,19 +91,19 @@ pipelines:
             - echo $pipelineVariable
             - popd
 
-      - name: utilityFunction3
+      - name: utilityFunctionverifypipe
         type: Bash
         configuration:
           integrations:
-            - name: s_gitHub
+            - name: vijay
           inputResources:
-            - name: repo_pipe
+            - name: vijay_pipe
           inputSteps:
             - name: utilityFunction2          
 
         execution:
           onExecute:
-            - pushd $res_repo_pipe_resourcePath
+            - pushd $res_vijay_pipe_resourcePath
             - restore_pipeline_files jfrog_pipeline $PWD/file.txt
             - cat file.txt
 #             - execute_command [--retry] printen
