@@ -76,7 +76,7 @@ pipelines:
           integrations:
             - name: vijay
           inputSteps:
-            - name: utilityFunction
+            - name: utilityFunctionadding
           inputResources:
             - name: vijay_pipe                
         execution:
@@ -99,7 +99,7 @@ pipelines:
           inputResources:
             - name: vijay_pipe
           inputSteps:
-            - name: utilityFunction2          
+            - name: utilityFunctionverify          
 
         execution:
           onExecute:
