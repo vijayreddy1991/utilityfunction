@@ -11,6 +11,7 @@ pipelines:
       - name: utilityFunctionadding
         type: Bash
         configuration:
+          nodePool: u18-static
           integrations:
             - name: vijay
           inputResources:
@@ -73,6 +74,7 @@ pipelines:
       - name: utilityFunctionverify
         type: Bash
         configuration:
+          nodePool: u18-static        
           integrations:
             - name: vijay
           inputSteps:
@@ -94,6 +96,7 @@ pipelines:
       - name: utilityFunctionverifypipe
         type: Bash
         configuration:
+          nodePool: u18-static        
           integrations:
             - name: vijay
           inputResources:
