@@ -19,7 +19,7 @@ pipelines:
             
         execution:
           onExecute: 
-            - printenv
+            - printenv123
             - bump_semver v3.0.0 major
             - bump_semver v3.0.0 minor
             - bump_semver v3.0.0 patch
