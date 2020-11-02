@@ -11,7 +11,7 @@ pipelines:
       - name: utilityFunctionadding
         type: Bash
         configuration:
-          nodePool: u18-static
+#           nodePool: u18-static
           integrations:
             - name: vijay
           inputResources:
@@ -33,6 +33,7 @@ pipelines:
             - echo "Hello frog" >> file.txt
             - touch test.txt
             - echo "Hello pipelines team" >> test.txt
+            - restore_cache_files $PWD/file.txt jfrog_pipe 
 #             - compare_git --resource vijay_pipe --commit-range HEAD~3..HEAD UtilityFunction.yml
 #             - update_commit_status vijay_pipe --status failure --message "My description 123" --context "stepB"            
 #             - read_json $res_vijay_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
