@@ -85,6 +85,7 @@ pipelines:
         execution:
           onExecute:
             - printenv
+            - restore_cache_files jfrog_pipe $PWD/file.txt
             - pushd $res_vijay_pipe_resourcePath
             - restore_run_files jfrog $PWD/test.txt
             - cat $PWD/test.txt
