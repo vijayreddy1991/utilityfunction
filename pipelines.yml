@@ -19,12 +19,12 @@ pipelines:
             
         execution:
           onExecute: 
-            - bump_semver v3.0.0 major
-            - bump_semver v3.0.0 minor
-            - bump_semver v3.0.0 patch
-            - bump_semver v3.0.0 beta
-            - pushd $res_vijay_pipe_resourcePath    
-            - touch keys
+#             - bump_semver v3.0.0 major
+#             - bump_semver v3.0.0 minor
+#             - bump_semver v3.0.0 patch
+#             - bump_semver v3.0.0 beta
+#             - pushd $res_vijay_pipe_resourcePath    
+#             - touch keys
             - echo "name =$res_vijay_pipe_gitProvider_name" >> keys
             - replace_envs $PWD/keys 
             - cat keys
@@ -32,22 +32,23 @@ pipelines:
             - echo "Hello frog" >> file.txt
             - touch test.txt
             - echo "Hello pipelines team" >> test.txt
-            - restore_cache_files $PWD/file.txt jfrog_pipe 
-#             - compare_git --resource vijay_pipe --commit-range HEAD~3..HEAD UtilityFunction.yml
-#             - update_commit_status vijay_pipe --status failure --message "My description 123" --context "stepB"            
-#             - read_json $res_vijay_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
-            - add_cache_files $PWD/file.txt jfrog_pipe 
-            - add_run_variables imageTag="master"
-            #- add_run_variables runVaribale="foo   123"
-            - add_run_files $PWD/test.txt jfrog
-            - add_pipeline_variables scm=$int_vijay_masterName
-            # - add_pipeline_variables pipelineVaribale="foo  bar"
-            - export_run_variables 
-            - export_pipeline_variables          
+#             - restore_cache_files $PWD/file.txt jfrog_pipe 
+# #             - compare_git --resource vijay_pipe --commit-range HEAD~3..HEAD UtilityFunction.yml
+# #             - update_commit_status vijay_pipe --status failure --message "My description 123" --context "stepB"            
+# #             - read_json $res_vijay_pipe_resourcePath/tests/yaml/sample.json "DOCKER_USERNAME"
+#             - add_cache_files $PWD/file.txt jfrog_pipe 
+#             - add_run_variables imageTag="master"
+#             #- add_run_variables runVaribale="foo   123"
+# #             - add_run_files $PWD/test.txt jfrog
+#             - add_pipeline_variables scm=$int_vijay_masterName
+#             # - add_pipeline_variables pipelineVaribale="foo  bar"
+#             - export_run_variables 
+#             - export_pipeline_variables          
             - add_pipeline_files $PWD/file.txt jfrog_pipeline
-            - find_resource_variable vijay_pipe resourcePath
-            - restore_cache_files jfrog_pipe $PWD/file.txt
-            - cat file.txt
+            - add_pipeline_files $PWD/test.txt jfrog_pipeline
+#             - find_resource_variable vijay_pipe resourcePath
+#             - restore_cache_files jfrog_pipe $PWD/file.txt
+#             - cat file.txt
 #             - openssl genrsa -out key.pem 1024 
 #             - openssl rsa -in key.pem -text -noout
 #             - openssl rsa -in key.pem -pubout -out pub.pem 
@@ -108,8 +109,10 @@ pipelines:
         execution:
           onExecute:
             - pushd $res_vijay_pipe_resourcePath
-            - restore_pipeline_files jfrog_pipeline $PWD/file.txt
+            - restore_pipeline_files jfrog_pipeline $PWD/file.txt 
+            - restore_pipeline_files jfrog_pipeline $PWD/test.txt
             - cat file.txt
+            - cat test.txt
 #             - execute_command [--retry] printen
 #             - retry_command printen
             - popd
