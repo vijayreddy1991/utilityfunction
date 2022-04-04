@@ -23,7 +23,7 @@ pipelines:
 #             - bump_semver v3.0.0 minor
 #             - bump_semver v3.0.0 patch
 #             - bump_semver v3.0.0 beta
-#             - pushd $res_vijay_pipe_resourcePath    
+            - pushd $res_vijay_pipe_resourcePath    
 #             - touch keys
             - echo "name =$res_vijay_pipe_gitProvider_name" >> keys
             - replace_envs $PWD/keys 
@@ -111,6 +111,7 @@ pipelines:
             - pushd $res_vijay_pipe_resourcePath
             - restore_pipeline_files jfrog_pipeline $PWD/file.txt 
             - restore_pipeline_files jfrog_pipeline $PWD/test.txt
+            - ls -la
             - cat file.txt
             - cat test.txt
 #             - execute_command [--retry] printen
