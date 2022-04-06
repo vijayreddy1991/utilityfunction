@@ -6,7 +6,7 @@ var json3 = require('./buildplanegcpimages.json');
 
 var combined = json1.concat(json2);
 combined = combined.concat(json3);
-var myset = new Set();
+var mySet = new Set();
 let uniqueBuildPlaneImages = [];
 
 // console.log(combined);
