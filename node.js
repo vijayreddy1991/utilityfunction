@@ -1,8 +1,8 @@
 var fs = require('fs');
 
-var json1 = require(process.env.RELEASE_VERSION + '-buildplaneImagesAWS.json');
-var json2 = require(process.env.RELEASE_VERSION + '-buildplaneImagesAZURE.json');
-var json3 = require(process.env.RELEASE_VERSION + '-buildplaneImagesGCP.json');
+var json1 = require(buildplaneawsimages.json');
+var json2 = require(buildplaneazureimages.json');
+var json3 = require(buildplanegcpimages.json');
 
 var combined = json1.concat(json2);
 combined = combined.concat(json3);
