@@ -13,7 +13,7 @@ let uniqueBuildPlaneImages = [];
 
 combined.map (eachItem => {
   if (!mySet.has(eachItem.imageId)) {
-    mySet.add(imageId);
+    mySet.add(eachItem.imageId);
     uniqueBuildPlaneImages.push(eachItem);
   }
 });
