@@ -9,7 +9,7 @@ combined = combined.concat(json3);
 var myset = new Set();
 let uniqueBuildPlaneImages = [];
 
-console.log(combined);
+// console.log(combined);
 
 combined.map (eachItem => {
   if (!mySet.has(eachItem.imageId)) {
