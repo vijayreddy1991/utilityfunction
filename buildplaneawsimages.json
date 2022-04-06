@@ -8,5 +8,25 @@
     "os": "Ubuntu_20.04",
     "metadataPropertyBag": {},
     "createdAt": "2022-04-04"
+    },
+    {
+    "name": "eu-central-1 image for x86_64 Ubuntu_20.04",
+    "provider": "amazonKeys",
+    "imageId": "ami-0200e9acad0604dc6",
+    "region": "eu-central-1",
+    "architecture": "x86_64",
+    "os": "Ubuntu_20.04",
+    "metadataPropertyBag": {},
+    "createdAt": "2022-04-04"
+    },
+    {
+    "name": "eu-central-1 image for x86_64 Ubuntu_20.04",
+    "provider": "amazonKeys",
+    "imageId": "ami-0200e9acad0604dc6",
+    "region": "eu-central-1",
+    "architecture": "x86_64",
+    "os": "Ubuntu_20.04",
+    "metadataPropertyBag": {},
+    "createdAt": "2022-04-04"
     }
   ]
