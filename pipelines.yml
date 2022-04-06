@@ -25,16 +25,17 @@ pipelines:
 #             - bump_semver v3.0.0 beta
             - pushd $res_vijay_pipe_resourcePath    
 #             - touch keys
-            - echo "name =$res_vijay_pipe_gitProvider_name" >> keys
-            - replace_envs $PWD/keys 
-            - cat keys
-            - touch file.txt
-            - echo "Hello frog" >> file.txt
-            - touch test.txt
-            - echo "Hello pipelines team" >> test.txt
-            - add_pipeline_files $PWD/file.txt jfrog_pipeline
-            - add_pipeline_files $PWD/test.txt jfrog_pipeline
+#             - echo "name =$res_vijay_pipe_gitProvider_name" >> keys
+#             - replace_envs $PWD/keys 
+#             - cat keys
+#             - touch file.txt
+#             - echo "Hello frog" >> file.txt
+#             - touch test.txt
+#             - echo "Hello pipelines team" >> test.txt
+#             - add_pipeline_files $PWD/file.txt jfrog_pipeline
+#             - add_pipeline_files $PWD/test.txt jfrog_pipeline
             - node node.js
+            - cat newBuildPlaneImages.json
             - popd
 
 
