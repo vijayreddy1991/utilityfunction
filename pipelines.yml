@@ -22,7 +22,7 @@ pipelines:
             - pushd $res_vijay_pipe_resourcePath    
             - ls -la
             - pwd
-            - npm build
+            - npm run build
             - node node.js
             - cat newBuildPlaneImages.json
             - popd
