@@ -10,5 +10,27 @@
       "type": "managed"
     },
     "createdAt": "2022-04-04"
-  }
+  },
+  {
+  "name": "eu-central-1 image for x86_64 Ubuntu_20.04",
+  "provider": "amazonKeys",
+  "imageId": "ami-0200e9acad0604dc6",
+  "region": "eu-central-1",
+  "architecture": "x86_64",
+  "os": "Ubuntu_20.04",
+  "metadataPropertyBag": {},
+  "createdAt": "2022-04-04"
+  },
+  {
+  "name": "westus image for x86_64 Ubuntu_18.04",
+  "provider": "azureKeys",
+  "imageId": "/subscriptions/f27d81be-eea4-479e-a745-11088b8cc1b0/resourceGroups/pipelines-resource-group/providers/Microsoft.Compute/images/pipelines-buildplane-X86_64_Ubuntu18-2022-04-04-1045",
+  "region": "westus",
+  "architecture": "x86_64",
+  "os": "Ubuntu_18.04",
+  "metadataPropertyBag": {
+    "type": "managed"
+  },
+  "createdAt": "2022-04-04"
+}
 ]
