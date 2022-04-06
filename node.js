@@ -15,4 +15,4 @@ combined.map (eachItem => {
   }
 });
 console.log(uniqueBuildPlaneImages);   
-fs.writeFileSync('newBuildPlaneImages.json', JSON.stringify(uniqueBuildplaneImages, null, 2), {flag: 'w'});
+fs.writeFileSync('newBuildPlaneImages.json', JSON.stringify(uniqueBuildPlaneImages, null, 2), {flag: 'w'});
