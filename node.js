@@ -4,13 +4,13 @@ var fs = require('fs');
 // var json2 = require('./buildplaneazureimages.json');
 // var json3 = require('./buildplanegcpimages.json');
 
-console.log(buildplaneImagesUsEast1GCP.json);
-
 var gcpBuildplaneImagesUseast = require('./buildplaneImagesUsEast1GCP.json');
 var gcpBuildplaneImagesEucentral = require('./buildplaneImagesGCPEuCentral.json');
 var gcpBuildplaneImagesUswest = require('./buildplaneImagesGCPUswest.json');
 var gcpBuildplaneImagesEuropewest = require('./buildplaneImagesGCPEuropewest.json');
 var gcpBuildplaneImagesAsiaeast = require('./buildplaneImagesGCPAsiaeast.json');
+
+console.log(gcpBuildplaneImagesUseast);
 
 
 combinedGCPBuildPlaneImages = ((((gcpBuildplaneImagesUseast
