@@ -32,5 +32,31 @@
     "type": "managed"
   },
   "createdAt": "2022-04-04"
-}
+},
+{
+  "name": "us-central1 image for x86_64 Ubuntu_18.04",
+  "provider": "gcloudKey",
+  "imageId": "7800778266274865132",
+  "region": "us-central1",
+  "architecture": "x86_64",
+  "os": "Ubuntu_18.04",
+  "metadataPropertyBag": {
+    "imageName": "us-central1-image-for-x86-64-ubuntu18-1649090818498",
+    "projectName": "pipelines-cloud-stg"
+  },
+  "createdAt": "2022-04-04"
+}, 
+  {
+    "name": "us-central1 image for x86_64 Ubuntu_18.04",
+    "provider": "gcloudKey",
+    "imageId": "7800778266274865132",
+    "region": "us-central1",
+    "architecture": "x86_64",
+    "os": "Ubuntu_18.04",
+    "metadataPropertyBag": {
+      "imageName": "us-central1-image-for-x86-64-ubuntu18-1649090818498",
+      "projectName": "pipelines-cloud-stg"
+    },
+    "createdAt": "2022-04-04"
+  }  
 ]
