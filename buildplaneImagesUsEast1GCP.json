@@ -28,5 +28,18 @@
     "os": "Ubuntu_20.04",
     "metadataPropertyBag": {},
     "createdAt": "2022-04-04"
-    }
+    },
+  {
+    "name": "us-east1 image for x86_64 Ubuntu_18.04",
+    "provider": "gcloudKey",
+    "imageId": "6718068584920555200",
+    "region": "us-east1",
+    "architecture": "x86_64",
+    "os": "Ubuntu_18.04",
+    "metadataPropertyBag": {
+      "imageName": "us-east1-image-for-x86-64-ubuntu18-1649090606078",
+      "projectName": "pipelines-cloud-stg"
+    },
+    "createdAt": "2022-04-04"
+  }  
   ]
