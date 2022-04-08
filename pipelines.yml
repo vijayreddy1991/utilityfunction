@@ -24,7 +24,7 @@ pipelines:
             - pwd
 #             - npm run build
             - node node.js
-            - cat newBuildPlaneImages.json
+            - cat newGCPBuildPlaneImages.json
             - popd
 
 
