@@ -1,0 +1,28 @@
+[
+    {
+    "name": "europe-west2 image for x86_64 Ubuntu_18.04",
+    "provider": "gcloudKey",
+    "imageId": "9147692315381768025",
+    "region": "europe-west2",
+    "architecture": "x86_64",
+    "os": "Ubuntu_18.04",
+    "metadataPropertyBag": {
+      "imageName": "europe-west2-image-for-x86-64-ubuntu18-1649090997235",
+      "projectName": "pipelines-cloud-stg"
+    },
+    "createdAt": "2022-04-04"
+  },
+  {
+    "name": "asia-east2 image for x86_64 Ubuntu_18.04",
+    "provider": "gcloudKey",
+    "imageId": "2656104347060313245",
+    "region": "asia-east2",
+    "architecture": "x86_64",
+    "os": "Ubuntu_18.04",
+    "metadataPropertyBag": {
+      "imageName": "asia-east2-image-for-x86-64-ubuntu18-1649091185458",
+      "projectName": "pipelines-cloud-stg"
+    },
+    "createdAt": "2022-04-04"
+  }
+]
